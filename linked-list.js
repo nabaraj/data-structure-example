@@ -61,7 +61,12 @@ function LinkedList() {
     }
     return indexes;
   };
-   
+   LinkedList.prototype.print = function(nextValue){
+	while(nextValue){
+		console.log("this value is ",nextValue.value);
+		nextValue = nextValue.next
+	}
+}
    
   var myLL = new LinkedList();
    
@@ -71,6 +76,7 @@ function LinkedList() {
   myLL.addToTail(19);
   myLL.addToTail('world');
   myLL.addToTail(20);
+myLL.print(myLL.head)
    
    
   
